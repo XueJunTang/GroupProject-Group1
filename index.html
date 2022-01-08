@@ -1,0 +1,241 @@
+<html>
+<head>
+<style type="text/css">
+div.topnav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.button {
+  background-color: #515151;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.home{
+   background-image: url('header.jpg');
+   height: 768px;
+  font-size: 45px;
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+
+.aboutus{
+  font-size: 25px;
+  position: relative;
+}
+
+.fila{
+  font-size: 25px;
+  position: relative;
+  background-color: #515151;
+  color: #FFFFFF;
+}
+
+.filatable{
+  font-size: 20px;
+  background-color: #515151;
+  color: #FFFFFF;
+}
+
+.contracttable{
+  font-size: 20px;
+}
+
+th, td {
+  padding:10px
+}
+
+.document{
+  font-size: 25px;
+  position: relative;
+  background-color: #515151;
+  color: #FFFFFF;
+}
+
+.doctable{
+  font-size: 20px;
+  background-color: #515151;
+  color: #FFFFFF;
+}
+</style>
+<script>
+  function fndownload(type){
+    alert("type:"+type);
+  }
+</script>
+</head>
+
+<body>
+<div class="topnav">
+  <div>
+    <p style="color: #FFFFFF;float:left; padding-left:16px;"><b>WOA7001 ADVANCED ALGORITHMS</b></p>
+    <a href="#document" style="float:right;">Related Document</a>
+    <a href="#contract" style="float:right;">Group Contract</a>
+    <a href="#fila"  style="float:right;">Fila Form</a>
+    <a href="#aboutus"  style="float:right;">About us</a>
+    <a href="#home"  style="float:right;">Home</a>  
+  </div>
+</div>
+
+<div class="home" id="home">
+  <img src="logo.png" width="250px" height="100px" align="right" style="padding-right:16px;" />
+ <h1>Group 1</h1>
+ <p style="position: absolute;bottom: 0;">Interactive Visualization Interface of the spread of Covid-19</p>
+</div>
+
+<div class="aboutus" id="aboutus">
+  <h1>About Us</h1>
+  <table width="100%">
+    <tr>
+      <td align="center"><img src="avartar.png"></td>
+      <td align="center"><img src="avartar.png"></td>
+      <td align="center"><img src="avartar.png"></td>
+      <td align="center"><img src="avartar.png"></td>
+    </tr>
+    <tr>
+      <td align="center"><font style="align: center;">Leader</font></td>
+      <td align="center"><font style="align: center;">Designer</font></td>
+      <td align="center"><font style="align: center;">Main Code Developer</font></td>
+      <td align="center"><font style="align: center;">Assistant Code Developer</font></td>
+    </tr>
+    <tr>
+      <td align="center"><font style="align: center;">Dillon Leong Lon Zan</font></td>
+      <td align="center"><font style="align: center;">Kai Yang Chong</font></td>
+      <td align="center"><font style="align: center;">Hongfei Ren</font></td>
+      <td align="center"><font style="align: center;">Xue Jun Tang</font></td>
+    </tr>
+    <tr>
+      <td align="center"><font style="align: center;">S2128427</font></td>
+      <td align="center"><font style="align: center;">S2117741</font></td>
+      <td align="center"><font style="align: center;">S2127527</font></td>
+      <td align="center"><font style="align: center;">S2127362</font></td>
+    </tr>
+  </table>
+</div>
+
+<div class="fila" id="fila">
+  <h1>Weekly Fila Form</h1>
+  <table id="filatable" class="filatable" width="100%">
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 1</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila1')" value="Download Fila Form Report"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 2</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila2')" value="Download Fila Form Report"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 3</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila3')" value="Download Fila Form Report"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 4</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila4')" value="Download Fila Form Report"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 5</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila5')" value="Download Fila Form Report"></input></td>
+    </tr>
+  </table>
+</div>
+
+<div class="contract" id="contract">
+  <h1>Group Contract</h1>
+  <table id="contracttable" class="contracttable" width="100%">
+    <tr>
+      <td width="30%"><font><b>Group Project</b></font></td>
+      <td width="70%"><font>WOA 7001: ADVANCED ALGORITHM GROUP CONTRACT</font></td>
+    </tr>
+    <tr>
+      <td colspan="2"><font>Group Leader : Dillon Leong Lon Zan<br>
+      Initial Propose  Project Name : Interactive Visualization Interface of the spread of Covid 19</font></td>
+    </tr>
+    <tr>
+      <td width="30%"><font>Participation</font></td>
+      <td width="70%"><font>Dillon Leong Lon Zan<br>Chong Kai Yang<br>Hongfei Ren<br>Tang Xue Jun</font></td>
+    </tr>
+    <tr>
+      <td width="30%"><font>Communication</font></td>
+      <td width="70%"><font>Through whatapps and ms team for meeting online discussion</font></td>
+    </tr>
+    <tr>
+      <td width="30%"><font>Meetings</font></td>
+      <td width="70%"><font>Will have one meeting in each week. </font></td>
+    </tr>
+    <tr>
+      <td width="30%"><font>Conduct </font></td>
+      <td width="70%"><font>Discuss idea together during online meeting session.</font></td>
+    </tr>
+    <tr>
+      <td width="30%"><font>Deadlines</font></td>
+      <td width="70%"><font>Every weekend (sunday) must finish each person’s task.</font></td>
+    </tr>
+    <tr>
+      <td width="30%"><font>Conflict</font></td>
+      <td width="70%"><font>Will discuss to determine the most suitable idea.</font></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="right"><input type="button" class="button" name="btn_downloadcontract" onclick="fndownload('group_contract')" value="Download Group Contract Report"></td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="document" id="document">
+  <h1>Related Document</h1>
+  <table id="doctable" class="doctable" width="100%">
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Document 1</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc1')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Document 2</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc2')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Document 3</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc3')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Document 4</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc4')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Document 5</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc5')" value="Download Document"></input></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
