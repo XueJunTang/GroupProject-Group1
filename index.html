@@ -1,98 +1,31 @@
 <html>
 <head>
-<style type="text/css">
-div.topnav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: #333;
-  overflow: hidden;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.button {
-  background-color: #515151;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.home{
-   background-image: url('header.jpg');
-   height: 768px;
-  font-size: 45px;
-  color: #FFFFFF;
-  padding-top: 30px;
-}
-
-.aboutus{
-  font-size: 25px;
-  position: relative;
-}
-
-.fila{
-  font-size: 25px;
-  position: relative;
-  background-color: #515151;
-  color: #FFFFFF;
-}
-
-.filatable{
-  font-size: 20px;
-  background-color: #515151;
-  color: #FFFFFF;
-}
-
-.contracttable{
-  font-size: 20px;
-}
-
-th, td {
-  padding:10px
-}
-
-.document{
-  font-size: 25px;
-  position: relative;
-  background-color: #515151;
-  color: #FFFFFF;
-}
-
-.doctable{
-  font-size: 20px;
-  background-color: #515151;
-  color: #FFFFFF;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <script>
   function fndownload(type){
-    alert("type:"+type);
-  }
+    var fileurl = "";
+    if(type == 'fila1'){
+      fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2Fmain%2FFILA%2520FORM%5FGroup1%2520Week%25201%2EdocxS";
+    }else if(type == 'fila2'){
+      fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2Fmain%2FFILA%2520FORM%5FGroup1%2520Week%25202%2Edocx";
+    }else if(type == 'fila3'){
+      fileurl="";
+    }else if(type == 'fila4'){
+      fileurl="";
+    }else if(type == 'fila5'){
+      fileurl="";
+    }else if(type == 'group_contract'){
+      fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2F9c9b3926263bd295317eca1576d6fcba4266983a%2FGroup%2DContract%2520Week%25202%2Edocx";
+    }
+
+    if(fileurl !== ''){
+      window.open(fileurl);
+    }else{
+      alert('Sorry, there is no file to download.');
+    }
+
+   }
+
 </script>
 </head>
 
@@ -101,6 +34,7 @@ th, td {
   <div>
     <p style="color: #FFFFFF;float:left; padding-left:16px;"><b>WOA7001 ADVANCED ALGORITHMS</b></p>
     <a href="#document" style="float:right;">Related Document</a>
+    <a href="#work" style="float:right;">Related Work</a>
     <a href="#contract" style="float:right;">Group Contract</a>
     <a href="#fila"  style="float:right;">Fila Form</a>
     <a href="#aboutus"  style="float:right;">About us</a>
@@ -211,6 +145,14 @@ th, td {
   </table>
 </div>
 
+<hr class="solid">
+
+<div class="work" id="work">
+  <h1>Related Work</h1>
+  <div class='tableauPlaceholder' id='viz1641817262964' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WOA7001Project&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object>
+  </div>                
+  <script type='text/javascript'>                    var divElement = document.getElementById('viz1641817262964');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+</div>
 
 <div class="document" id="document">
   <h1>Related Document</h1>
