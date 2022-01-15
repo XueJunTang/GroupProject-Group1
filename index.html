@@ -1,11 +1,15 @@
 <html>
 <head>
+  <title>WOA7001 - Group 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <script>
   function fndownload(type){
     var fileurl = "";
     if(type == 'fila1'){
-      fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2Fmain%2FFILA%2520FORM%5FGroup1%2520Week%25201%2EdocxS";
+      fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2Fmain%2FFILA%2520FORM%5FGroup1%2520Week%25201%2Edocx";
     }else if(type == 'fila2'){
       fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2Fmain%2FFILA%2520FORM%5FGroup1%2520Week%25202%2Edocx";
     }else if(type == 'fila3'){
@@ -16,52 +20,112 @@
       fileurl="";
     }else if(type == 'group_contract'){
       fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2F9c9b3926263bd295317eca1576d6fcba4266983a%2FGroup%2DContract%2520Week%25202%2Edocx";
+    }else if(type == 'bigfive1'){
+      fileurl="";
+    }else if(type == 'bigfive2'){
+      fileurl="";
+    }else if(type == 'bigfive3'){
+      fileurl="";
+    }else if(type == 'bigfive4'){
+      fileurl="";
+    }else if(type == 'plan1'){
+      fileurl="";
+    }else if(type == 'plan2'){
+      fileurl="";
+    }else if(type == 'plan3'){
+      fileurl="";
+    }else if(type == 'plan4'){
+      fileurl="";
     }
 
     if(fileurl !== ''){
-      window.open(fileurl);
+      //window.open(fileurl);
+      showDocument(fileurl);
     }else{
       alert('Sorry, there is no file to download.');
     }
 
    }
 
+   function resizeIframe(obj) {
+      obj.style.height = '530px';
+      obj.style.width = '1200px';
+    }
+
+  function closeBtn(){
+    var popup = document.getElementById("myModal");
+    var inner = document.getElementById("inner").innerHTML;
+    var iframe = document.getElementById("iframe");
+    var check;
+      popup.style.display = "none";
+      iframe.style.height = "1px";
+      document.getElementById("inner").innerHTML = inner;
+      clearInterval(check);
+    }
+  
+  function showDocument(src){
+      var popup = document.getElementById("myModal");
+      var inner = document.getElementById("inner").innerHTML;
+      var iframe = document.getElementById("iframe");
+      var check;
+    
+      document.getElementById("inner").innerHTML = "";
+      document.getElementById("inner").innerHTML += "For download document, please click on the menu icon - Download a Copy. ";
+      document.getElementById("inner").innerHTML += "<span class='close pt-3' onclick='closeBtn()'>&times;</span>";
+      popup.style.display = "block";
+      
+      iframe.src = src;
+  
+    }
+
+  function fnopen(){
+    window.open("https://public.tableau.com/app/profile/kds1/viz/WOA7001Project/Dashboard1");
+  }
 </script>
 </head>
 
 <body>
-<div class="topnav">
-  <div>
-    <p style="color: #FFFFFF;float:left; padding-left:16px;"><b>WOA7001 ADVANCED ALGORITHMS</b></p>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<div class="home" id="home">
+  <div class="topnav">
+    <p style="float:left; padding-left:20px; font-size: 15px;"><b>WOA7001 ADVANCED ALGORITHMS</b></p>
     <a href="#document" style="float:right;">Related Document</a>
     <a href="#work" style="float:right;">Related Work</a>
     <a href="#contract" style="float:right;">Group Contract</a>
     <a href="#fila"  style="float:right;">Fila Form</a>
     <a href="#aboutus"  style="float:right;">About us</a>
     <a href="#home"  style="float:right;">Home</a>  
-  </div>
 </div>
-
-<div class="home" id="home">
-  <img src="logo.png" width="250px" height="100px" align="right" style="padding-right:16px;" />
- <h1>Group 1</h1>
- <p style="position: absolute;bottom: 0;">Interactive Visualization Interface of the spread of Covid-19</p>
+<br>
+  <img src="logo.png" width="200px" height="80px" align="left" style="padding-left:10px;" />
+ <h1 style="position: absolute;bottom:35;padding-left: 40px;">Group 1</h1>
+ <p style="position: absolute;bottom: 0;padding-left: 40px;">Interactive Visualization Interface of the spread of Covid-19</p>
 </div>
 
 <div class="aboutus" id="aboutus">
-  <h1>About Us</h1>
-  <table width="100%">
+  <h1 style="padding-left: 40px; padding-top: 10px; color: #5680E9;">About Us</h1>
+  <div style="text-align: center;" align="center">
+    <p style="color: #5680E9;"><b>About this project</b></p>
+    <p style="font-size:15px;">This project is carry out under WOA7001 Advance Algorithm course, which under supervised of Dr. Raja Jamilah Binti Raja Yusof.</p>
+    <p style="font-size:15px;">The aim of this project is to use advance algorithm to visualize the movement people and how it is related to the spread of covid-19</p>
+  </div><br>
+  <div style="text-align: center;" align="center">
+    <p style="color: #5680E9;"><b>About our team</b></p>
+    <p style="font-size:15px;">This project is carry out by 4 team members, who came under subject WOA7001 Advance Algorithm. <br> Below are our team member details and role.</p>
+  </div>
+  <br>
+  <table width="90%" align="center">
     <tr>
       <td align="center"><img src="avartar.png"></td>
       <td align="center"><img src="avartar.png"></td>
       <td align="center"><img src="avartar.png"></td>
-      <td align="center"><img src="avartar.png"></td>
+      <td align="center"><img src="avartar1.jpg"></td>
     </tr>
     <tr>
-      <td align="center"><font style="align: center;">Leader</font></td>
-      <td align="center"><font style="align: center;">Designer</font></td>
-      <td align="center"><font style="align: center;">Main Code Developer</font></td>
-      <td align="center"><font style="align: center;">Assistant Code Developer</font></td>
+      <td align="center"><font style="align: center;"><b>Leader</b></font></td>
+      <td align="center"><font style="align: center;"><b>Designer</b></font></td>
+      <td align="center"><font style="align: center;"><b>Main Code Developer</b></font></td>
+      <td align="center"><font style="align: center;"><b>Assistant Code Developer</b></font></td>
     </tr>
     <tr>
       <td align="center"><font style="align: center;">Dillon Leong Lon Zan</font></td>
@@ -78,35 +142,42 @@
   </table>
 </div>
 
+  <div id="myModal" class="modal">
+    <div class="modal-content"  style="min-height:30vh">
+      <span id="inner" style="font-size: 120%; font-weight: 700;"><span class="close" onclick="closeBtn()"></span></span>
+      <iframe id="iframe" onload="resizeIframe(this)" ></iframe>
+    </div>
+  </div>
+
 <div class="fila" id="fila">
-  <h1>Weekly Fila Form</h1>
-  <table id="filatable" class="filatable" width="100%">
+  <h1 style="padding-left: 40px; padding-top: 10px; color: #FFFFFF;">Weekly Fila Form</h1>
+  <table id="filatable" class="filatable" width="60%" align="center">
     <tr>
       <td align="center" width="40%"><font style="align: center;">Week 1</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila1')" value="Download Fila Form Report"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila1')" value="View Fila Form Report"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Week 2</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila2')" value="Download Fila Form Report"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila2')" value="View Fila Form Report"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Week 3</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila3')" value="Download Fila Form Report"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila3')" value="View Fila Form Report"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Week 4</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila4')" value="Download Fila Form Report"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila4')" value="View Fila Form Report"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Week 5</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila5')" value="Download Fila Form Report"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('fila5')" value="View Fila Form Report"></input></td>
     </tr>
   </table>
 </div>
 
 <div class="contract" id="contract">
-  <h1>Group Contract</h1>
-  <table id="contracttable" class="contracttable" width="100%">
+  <h1 style="padding-left: 40px; padding-top: 10px; color: #5680E9;">Group Contract</h1>
+  <table width="90%" align="center">
     <tr>
       <td width="30%"><font><b>Group Project</b></font></td>
       <td width="70%"><font>WOA 7001: ADVANCED ALGORITHM GROUP CONTRACT</font></td>
@@ -144,40 +215,102 @@
     </tr>
   </table>
 </div>
-
+<br>
 <hr class="solid">
 
 <div class="work" id="work">
-  <h1>Related Work</h1>
-  <div class='tableauPlaceholder' id='viz1641817262964' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WOA7001Project&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object>
+  <h1 style="padding-left: 40px; padding-top: 10px; color: #5680E9;">Related Work</h1>
+  <div class='tableauPlaceholder' id='viz1641817262964' style='position: relative'>
+    <object class='tableauViz'  style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+      <param name='embed_code_version' value='3' /> 
+      <param name='site_root' value='' />
+      <param name='name' value='WOA7001Project&#47;Dashboard1' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-US' />
+    </object>
   </div>                
-  <script type='text/javascript'>                    var divElement = document.getElementById('viz1641817262964');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+  <script type='text/javascript'>                    
+    var divElement = document.getElementById('viz1641817262964');                    
+    var vizElement = divElement.getElementsByTagName('object')[0];                    
+    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+    else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';}else { vizElement.style.width='100%';vizElement.style.height='1777px';}                     
+  var scriptElement = document.createElement('script');                    
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+  <br>
+  <div align="right" style="padding-right:100px;"> 
+      <input type="button" class="button round_btn" name="btn_viewwork" onclick="fnopen();" value="View on Tableau">
+  </div>
 </div>
 
 <div class="document" id="document">
-  <h1>Related Document</h1>
+  <h1 style="padding-left: 40px; padding-top: 10px; color:#FFFFFF;">Related Document</h1>
+  <button type="button" class="collapsible" style="padding-left: 100px;">Big Five Personality Test</button>
+  <div class="content">
   <table id="doctable" class="doctable" width="100%">
     <tr>
-      <td align="center" width="40%"><font style="align: center;">Document 1</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc1')" value="Download Document"></input></td>
+      <td align="center" width="40%"><font style="align: center;">Dillon's Test Result</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive1')" value="Download Document"></input></td>
     </tr>
     <tr>
-      <td align="center" width="40%"><font style="align: center;">Document 2</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc2')" value="Download Document"></input></td>
+      <td align="center" width="40%"><font style="align: center;">Kai Yang's Test Result</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive2')" value="Download Document"></input></td>
     </tr>
     <tr>
-      <td align="center" width="40%"><font style="align: center;">Document 3</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc3')" value="Download Document"></input></td>
+      <td align="center" width="40%"><font style="align: center;">Hong Fei's Test Result</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive3')" value="Download Document"></input></td>
     </tr>
     <tr>
-      <td align="center" width="40%"><font style="align: center;">Document 4</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc4')" value="Download Document"></input></td>
-    </tr>
-    <tr>
-      <td align="center" width="40%"><font style="align: center;">Document 5</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('doc5')" value="Download Document"></input></td>
+      <td align="center" width="40%"><font style="align: center;">Xue Jun's Test Result</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive4')" value="Download Document"></input></td>
     </tr>
   </table>
+  </div>
+  <button type="button" class="collapsible" style="padding-left: 100px;">Group Plan</button>
+  <div class="content">
+    <table id="doctable1" class="doctable" width="100%">
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 1 Plan</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('plan1')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 2 Plan</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('plan2')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 3 Plan</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('plan3')" value="Download Document"></input></td>
+    </tr>
+    <tr>
+      <td align="center" width="40%"><font style="align: center;">Week 4 Plan</font></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('plan4')" value="Download Document"></input></td>
+    </tr>
+  </table>
+  </div>
 </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
