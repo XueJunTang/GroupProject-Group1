@@ -1,10 +1,10 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'BioRhyme', serif;
+}
 
-div.topnav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: #333;
+.topnav {
   overflow: hidden;
 }
 
@@ -18,7 +18,7 @@ div.topnav {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #C1C8E4;
   color: black;
 }
 
@@ -28,7 +28,7 @@ div.topnav {
 }
 
 .button {
-  background-color: #515151;
+  background: linear-gradient(to left, #5680e9 0%, #8860d0 100%);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -38,35 +38,35 @@ div.topnav {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 16px;
 }
 
 .home{
-   background-image: url('header.jpg');
    height: 768px;
-  font-size: 45px;
+  font-size: 30px;
   color: #FFFFFF;
-  padding-top: 30px;
+   background-image: url('header.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto;
 }
 
 .aboutus{
-  font-size: 25px;
-  position: relative;
+  font-size: 20px;
 }
 
 .fila{
-  font-size: 25px;
-  position: relative;
-  background-color: #515151;
-  color: #FFFFFF;
-}
-
-.filatable{
   font-size: 20px;
-  background-color: #515151;
-  color: #FFFFFF;
+  position: relative;
+  background: radial-gradient(#B1E0F5 0%, #84CEEB 60%, #C1C8E4 100%);
 }
 
-.contracttable{
+.contract{
+  font-size: 20px;
+}
+
+.work{
   font-size: 20px;
 }
 
@@ -75,20 +75,78 @@ th, td {
 }
 
 .document{
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
-  background-color: #515151;
-  color: #FFFFFF;
+  background: radial-gradient(#B1E0F5 0%, #84CEEB 60%, #C1C8E4 100%);
 }
 
 .doctable{
-  font-size: 20px;
-  background-color: #515151;
-  color: #FFFFFF;
+  font-size: 15px;
+  background: radial-gradient(#B1E0F5 0%, #84CEEB 60%, #C1C8E4 100%);
 }
 
 iframe {border: none;}
 
 hr.solid {
   border-top: 3px solid #bbb;
+  width: 90%;
+  align-content: center;
+}
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 15;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      left: 0;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      
+    }
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+.collapsible {
+  background-color: #5680E9;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #C1C8E4;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }
