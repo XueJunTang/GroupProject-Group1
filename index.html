@@ -20,14 +20,6 @@
       fileurl="";
     }else if(type == 'group_contract'){
       fileurl="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FXueJunTang%2FGroupProject%2DGroup1%2F9c9b3926263bd295317eca1576d6fcba4266983a%2FGroup%2DContract%2520Week%25202%2Edocx";
-    }else if(type == 'bigfive1'){
-      fileurl="";
-    }else if(type == 'bigfive2'){
-      fileurl="";
-    }else if(type == 'bigfive3'){
-      fileurl="";
-    }else if(type == 'bigfive4'){
-      fileurl="/XueJunTang/GroupProject-Group1/raw/main/TangXueJun(s2127362)-Big_Five_Result.pdf";
     }else if(type == 'plan1'){
       fileurl="";
     }else if(type == 'plan2'){
@@ -85,6 +77,52 @@
         window.open("https://public.tableau.com/app/profile/kds1/viz/WOA7001Project/Dashboard12");
      }
   }
+
+  function fndownload_PDF(type){
+
+    var fileURL = "";
+    var fileName = "";
+
+    if(type == 'bigfive1'){
+      fileurl="";
+    }else if(type == 'bigfive2'){
+      fileurl="";
+    }else if(type == 'bigfive3'){
+      fileurl="";
+    }else if(type == 'bigfive4'){
+      fileURL="/XueJunTang/GroupProject-Group1/raw/main/TangXueJun(s2127362)-Big_Five_Result.pdf";
+      fileName = "TangXueJun(s2127362)-Big_Five_Result.pdf";
+    }
+
+    // for non-IE
+    if (!window.ActiveXObject) {
+        var save = document.createElement('a');
+        save.href = fileURL;
+        save.target = '_blank';
+        var filename = fileURL.substring(fileURL.lastIndexOf('/')+1);
+        save.download = fileName || filename;
+           if ( navigator.userAgent.toLowerCase().match(/(ipad|iphone|safari)/) && navigator.userAgent.search("Chrome") < 0) {
+                document.location = save.href; 
+    // window event not working here
+            }else{
+                var evt = new MouseEvent('click', {
+                    'view': window,
+                    'bubbles': true,
+                    'cancelable': false
+                });
+                save.dispatchEvent(evt);
+                (window.URL || window.webkitURL).revokeObjectURL(save.href);
+            }   
+    }
+    // for IE < 11
+    else if ( !! window.ActiveXObject && document.execCommand)     {
+        var _window = window.open(fileURL, '_blank');
+        _window.document.close();
+        _window.document.execCommand('SaveAs', true, fileName || fileURL)
+        _window.close();
+    }
+  }
+
 </script>
 </head>
 
@@ -301,19 +339,19 @@
   <table id="doctable" class="doctable" width="100%">
     <tr>
       <td align="center" width="40%"><font style="align: center;">Dillon's Test Result</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive1')" value="Download Document"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload_PDF('bigfive1')" value="Download Document"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Kai Yang's Test Result</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive2')" value="Download Document"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload_PDF('bigfive2')" value="Download Document"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Hong Fei's Test Result</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive3')" value="Download Document"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload_PDF('bigfive3')" value="Download Document"></input></td>
     </tr>
     <tr>
       <td align="center" width="40%"><font style="align: center;">Xue Jun's Test Result</font></td>
-      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload('bigfive4')" value="Download Document"></input></td>
+      <td align="center" width="60%"><input class="button" type="button" onclick="fndownload_PDF('bigfive4')" value="Download Document"></input></td>
     </tr>
   </table>
   </div>
