@@ -1,0 +1,152 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'BioRhyme', serif;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #C1C8E4;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.button {
+  background: linear-gradient(to left, #5680e9 0%, #8860d0 100%);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.home{
+   height: 768px;
+  font-size: 30px;
+  color: #FFFFFF;
+   background-image: url('header.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto;
+}
+
+.aboutus{
+  font-size: 20px;
+}
+
+.fila{
+  font-size: 20px;
+  position: relative;
+  background: radial-gradient(#B1E0F5 0%, #84CEEB 60%, #C1C8E4 100%);
+}
+
+.contract{
+  font-size: 20px;
+}
+
+.work{
+  font-size: 20px;
+}
+
+th, td {
+  padding:10px
+}
+
+.document{
+  font-size: 20px;
+  position: relative;
+  background: radial-gradient(#B1E0F5 0%, #84CEEB 60%, #C1C8E4 100%);
+}
+
+.doctable{
+  font-size: 15px;
+  background: radial-gradient(#B1E0F5 0%, #84CEEB 60%, #C1C8E4 100%);
+}
+
+iframe {border: none;}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+  width: 90%;
+  align-content: center;
+}
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 15;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      left: 0;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      
+    }
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+.collapsible {
+  background-color: #5680E9;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #C1C8E4;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
